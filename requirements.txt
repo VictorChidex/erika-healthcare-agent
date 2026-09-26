@@ -1,0 +1,10 @@
+# Minimum versions used by the agent notebook. Install in a fresh virtual environment.
+langchain>=0.3.25
+langchain-aws>=0.2.24
+langchain-community>=0.3.23
+langchain-core>=0.3.62
+boto3>=1.38.0
+pydantic>=2.11.4
+python-dotenv>=1.0
+notebook>=7.0
+ipykernel>=6.0
