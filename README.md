@@ -118,9 +118,131 @@ The tool currently offers **no patient-level access control**, uses a limited ed
 
 Potential engineering extensions: a schema adapter for external records; retrieval evaluation with cited document spans; patient isolation; stronger response-length validation; and a mock model test of tool selection. These are roadmap items, not implemented features.
 
-## Publish on GitHub
+## Ask questions about the existing records
 
-Follow [`docs/PUBLISHING.md`](docs/PUBLISHING.md) for the first commit, remote repository, and profile setup.
+```bash
+These examples call the model independently. Run any one after Section 6. They read records from `DATA_DIR`.
+```
+
+### 1 Record and visit lookup
+
+These examples call the model independently. Run any one after Section 6. They read records from `DATA_DIR`.
+
+
+```bash
+How many fictional patients and hospital visits are recorded?
+```
+<img width="780" height="64" alt="image" src="https://github.com/user-attachments/assets/9c58fbb7-3a90-4d35-a03f-2ed305e26049" />
+
+
+```bash
+For SYN-007, show admission date, discharge status and relevant note ID
+```
+<img width="784" height="94" alt="image" src="https://github.com/user-attachments/assets/527970ba-4328-40d6-8910-267a4f5d605f" />
+
+
+### 2 General health questions and documented explanations
+
+```bash
+I have cold, what is the diagnosis. Also  nasal congestion
+```
+<img width="781" height="133" alt="image" src="https://github.com/user-attachments/assets/47bafe42-a6a0-4bfd-9b87-7c7e98fc735d" />
+
+
+
+```bash
+I need educational info for cold
+```
+<img width="786" height="80" alt="image" src="https://github.com/user-attachments/assets/171840be-d08a-4595-a067-42b12a6a919e" />
+
+
+
+```bash
+provide educational material on upper‑respiratory‑infection management
+```
+<img width="778" height="435" alt="image" src="https://github.com/user-attachments/assets/dea9f54c-7e75-444f-85ff-6b03416d8252" />
+
+
+
+```bash
+Explain the documented diagnosis at SYN-001 encounter ENC-001-1 with a source link.
+```
+<img width="783" height="192" alt="image" src="https://github.com/user-attachments/assets/8d2cd56c-9582-44ac-9775-0633f9be5640" />
+
+
+```bash
+what is hypertension
+```
+<img width="777" height="113" alt="image" src="https://github.com/user-attachments/assets/73f0ffa7-9883-4606-b307-c8228d76658b" />
+
+
+
+```bash
+can you perform calculations?
+```
+<img width="776" height="78" alt="image" src="https://github.com/user-attachments/assets/92edc119-d874-4e87-b767-ad3e25941d70" />
+
+
+```bash
+what is the BMI of a patient with 56kg and 178 cm. the age of the patient is 30 year. is this a good BMI or is that a medical issue? What are the possible prognosis
+```
+<img width="777" height="263" alt="image" src="https://github.com/user-attachments/assets/e3f500ec-b5e8-4998-b455-ec58055cb011" />
+
+### 3 Patient list, billing, and general information
+The balance example reflects payments already stored in the folder.
+
+```bash
+List all patients id
+```
+<img width="779" height="430" alt="image" src="https://github.com/user-attachments/assets/a722d420-d975-46f8-9832-714da58631bc" />
+
+
+
+```bash
+What is SYN-001's verified balance after the additional test payment of $100?
+```
+<img width="777" height="39" alt="image" src="https://github.com/user-attachments/assets/691fcce9-3d6d-43f3-8681-9dd14cdfc720" />
+
+
+
+```bash
+what is cancer
+```
+<img width="775" height="77" alt="image" src="https://github.com/user-attachments/assets/c2470ff5-f4c2-4049-a907-2f6575dc6166" />
+
+### 4 Fictional pasted cases
+
+```bash
+Fictional case: A 45-year-old has four weeks of dizziness on standing,
+episodic palpitations, and loose stools. A new medication was started
+two weeks ago. No vital signs or test results are available.
+
+Explain possible causes as hypotheses, what information is missing,
+and what should be discussed with a clinician. This case is not in
+any patient document.
+```
+<img width="775" height="91" alt="image" src="https://github.com/user-attachments/assets/121120d8-958e-486d-9a43-47f3d601904b" />
+
+
+
+```bash
+Fictional discharge-note text: HFrEF with an ejection fraction of
+35%; CKD stage G3b with eGFR 38 mL/min/1.73 m²; type 2 diabetes in the
+history. Repeat blood tests and cardiology follow-up were requested. Iron
+studies are pending. An older list says furosemide 20 mg daily, while the
+discharge list says 40 mg daily. The current dose is unknown. No new
+symptoms are reported.
+
+Explain the terms and measurements in plain language. Separate what this
+pasted text states from general information and what remains unknown.
+Explain why the heart and kidney conditions may both matter. Identify the
+medication-list discrepancy.
+```
+<img width="782" height="637" alt="image" src="https://github.com/user-attachments/assets/929113f4-7eab-49fe-b7fc-0b1f3ba95510" />
+
+
+
+
 
 ## License
 
