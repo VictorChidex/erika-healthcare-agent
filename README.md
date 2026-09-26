@@ -109,7 +109,7 @@ The test creates data in a temporary directory, opens it with the independent ag
 | `FileNotFoundError` for `manifest.json` or cases | Run all of Part 1 or set Part 2's `DATA_DIR` to the existing output folder, not its parent. |
 | Bedrock authentication error | Check the key in `.env`, its validity, and that Jupyter started in the repository root; restart the kernel after changing environment variables. |
 | Model access or region error | Check `AWS_REGION`, `MODEL_ID`, and access for that model in your AWS account. |
-| `aria_agent` is undefined in an older notebook | Use the Part 2 notebook in this repository; its examples call `erika_agent`. |
+| `erika_agent` is defined in notebook | Use the Part 2 notebook in this repository; its examples call `erika_agent`. |
 | Different records cannot be read | Follow the [data contract](docs/DATA_CONTRACT.md) or build an ingestion adapter. The reader does not infer arbitrary schemas. |
 
 ## Boundaries and next steps
