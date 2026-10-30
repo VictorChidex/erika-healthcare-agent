@@ -1,5 +1,34 @@
 # ERIKA — Healthcare Records Assistant (Synthetic Demo)
 
+## Research Motivation
+
+Healthcare is one of the highest-stakes domains for AI deployment — a model that 
+confidently produces wrong clinical information causes direct harm. This project 
+investigates a central question in AI safety: how do agent architecture choices 
+(retrieval grounding, confidence gating, escalation thresholds) affect output 
+reliability in a domain where failure is costly?
+
+The urgent-pattern fixture that suppresses ordinary diagnostic suggestions, and the 
+case discussion design that distinguishes documented facts from hypotheses, are 
+concrete explorations of the intended-vs-observed behaviour gap — the empirical 
+question at the core of AI Control research.
+
+
+## Evaluation
+
+| Metric | Value |
+| --- | --- |
+| Fictional patients in dataset | 20 |
+| Hospital visits covered | 47 |
+| Notes verified by offline reader | 47 / 47 (100%) |
+| LangChain tools implemented | 17 |
+| Offline CI checks (no AWS required) | Pass |
+| Urgent-pattern suppression (safety fixture) | Active |
+
+*Full offline test: `python -m unittest discover -s tests -v`*
+
+
+
 **A file-backed LangChain agent that answers questions over an existing fictional hospital dataset using Amazon Bedrock.** The project separates data generation from the agent: you can start the agent in a fresh notebook session and point it at records already on disk.
 
 > **Portfolio project:** This is an educational prototype using fictional patients. It is not a clinical decision support product or a deployment for real patient data.
